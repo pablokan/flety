@@ -44,7 +44,7 @@ def main(page: Page):
     )
     b = ElevatedButton(text="Probar tiro", on_click=button_clicked)
     page.add(tb1, b)
+    page.scroll = "always"
     page.update()
 
-flet.app(target=main)
-
+flet.app(port=8550, target=main, view=flet.WEB_BROWSER)

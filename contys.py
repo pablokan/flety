@@ -1,5 +1,5 @@
 import flet
-from flet import Container, Page, Row, Text, alignment, colors
+from flet import Container, Page, Row, Text, TextField, alignment, colors
 
 def main(page: Page):
     page.title = "Containers - clickable and not"
@@ -10,7 +10,7 @@ def main(page: Page):
         Row(
             [
                 Container(
-                    content=Text("Non clickable"),
+                    content=TextField(),
                     margin=10,
                     padding=10,
                     alignment=alignment.center,
@@ -58,4 +58,5 @@ def main(page: Page):
         ),
     )
 
-flet.app(target=main)
+#flet.app(target=main)
+flet.app(port=8550, target=main, view=flet.WEB_BROWSER)

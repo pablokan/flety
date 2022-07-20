@@ -9,4 +9,5 @@ def main(page):
     page.add(Row([new_task, ElevatedButton("Add", on_click=add_clicked)]))
     
 
-flet.app(target=main)
+#flet.app(target=main)
+flet.app(target=main, view=flet.WEB_BROWSER)
